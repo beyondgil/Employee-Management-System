@@ -1,0 +1,70 @@
+Mini Project- Employee Management System
+！！！！！！！！！！！！！！！！！！
+Create a Java Web Application using HTML, CSS, JavaScript, JSP and AJAX to manage information about employees and departments with the following features:
+
+1.CRUD(Create, Retrieve, Update and Delete) operations for
+ A. Departments
+B.Employees
+2.Associate designation with each employee
+3. An employee may belong to multiple departments
+4. An employee may login and request for a change in his profile info like address, phone number as he cannot make the changes directly.
+5. Need to have an Admin user to manage employees and department
+6. Every employee reports to his/her manager
+7.Create a list of Reports for the following:
+     A. Newly joined employees
+     B. Details of all the employees of a department
+     C. Department which has least number of employees
+     D. Manager who has highest number of reportees.
+     E. Employees who belong to multiple departments
+     F. Employees across departments who are drawing the same salary
+
+Important Note:
+
+1. Discuss among your team member and come up with an approach to implement the features specified in 2, 4, 6
+
+2.The reports must be generated in the form of excel(.xls) files
+
+3. Nice to have (not mandatory)
+     A Generating Graphs for (Bar/Pie)
+          i. No.
+          ii. No.
+          
+Table employee: emp_id(primary), emp_name, salary, phone, email, passowrd
+Table department: dep_id(primary), dep_name, man_id(foreign)
+Table emp_dep: emp_id, dep_id
+Table manager: man_id, emp_id(foreign)
+
+create table employee
+     (
+     emp_id int not null primary key,
+     emp_name varchar(255) not null,
+     salary float(2),
+     phone int,
+     email varchar(255),
+     password varchar(255)
+     );
+    
+create table manager
+     (
+     man_id int,
+     emp_id int,
+     foreign key(emp_id) references employee(emp_id)
+     )
+     ;
+    
+create table department
+     (
+     dep_id int not null,
+     dep_name varchar(255),
+     man_id int,
+     primary key(dep_id),
+     foreign key(man_id) references employee(emp_id)
+     );
+
+create table emp_dep
+	(
+	emp_id int,
+	dep_id int,
+	foreign key(emp_id) references employee(emp_id),
+	foreign key(dep_id) references department(dep_id)
+	);
