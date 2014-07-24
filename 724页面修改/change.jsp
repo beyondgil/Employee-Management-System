@@ -9,12 +9,13 @@
   <meta name="Keywords" content="change">
   <meta name="Description" content="change">
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
+  
   <title>Change</title>
-	<script type="text/javascript">
+<script type="text/javascript">
 	function show_confirm()
-	{
-	var info_check=check();
+	{	var info_check=check();
 	if(info_check==true){
+
 	var r=confirm("Do you want to change your Information!");
 	if (r==true)
 	  {
@@ -78,7 +79,7 @@
  <body>
   <h1>Information Change Request </h1>
   <hr>
-<form action=login.html  name=form1 method=post>
+<form action=login.jsp name=form1 method=post>
 <table>
 <tr>
 	<td class="title">Salary:</td>
@@ -113,8 +114,8 @@
 
   </tr>
     <tr>
-	<td><input type=image onclick="show_confirm()" src="images/submit.png" ></td>
-	<td><input type="image" src="images/Reset.png"  onclick="javascript:admin.reset(); return false;"></td>
+	<td><input type="image" src="images/submit.png"  onclick="show_confirm();return false;"   ></td>
+	<td><input type="image" src="images/Reset.png"  onclick="javascript:form1.reset(); return false;"></td>
   </tr>
   </table>
 
