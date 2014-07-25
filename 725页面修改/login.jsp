@@ -35,11 +35,11 @@
 							  <hr>
 							  <table>
 							  <tr>
-								<td>Username</td>
-								<td><input type='text' name='username'/></td>
+								<td class="tag1">Username:</td>
+								<td><input type='text' name='username' /></td>
 							  </tr>
 							  <tr>
-								<td>Password</td>
+								<td class="tag1">Password:</td>
 								<td><input type='password' name='password'/></td>
 							  </tr>
 								<tr>
@@ -71,11 +71,11 @@
 							  <hr>
 							  <table>
 							  <tr>
-								<td>Username</td>
+								<td  class="tag1">Username:</td>
 								<td><input type='text' name='username'/></td>
 							  </tr>
 							  <tr>
-								<td>Password</td>
+								<td  class="tag1">Password:</td>
 								<td><input type='password' name='password'/></td>
 							  </tr>
 								<tr>

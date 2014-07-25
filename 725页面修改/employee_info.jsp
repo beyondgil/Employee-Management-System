@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <script type="text/javascript">
 	function showtime(){
-	var today=new Date();
+	var today=new Date();  
 	var h=today.getHours();
 	if(h<12){
 	document.getElementById('txt').innerHTML="Good Morning";}

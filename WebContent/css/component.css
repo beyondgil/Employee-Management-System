@@ -48,9 +48,9 @@ Build the scene and rotate on hover
 }
 
 .movie:hover {
-	-webkit-transform: rotateY(-78deg) translateZ(20px);
-	-moz-transform: rotateY(-78deg) translateZ(20px);
-	transform: rotateY(-78deg) translateZ(20px);
+	-webkit-transform: rotateY(-90deg) translateZ(20px);
+	-moz-transform: rotateY(-90deg) translateZ(20px);
+	transform: rotateY(-90deg) translateZ(20px);
 }
 
 /*************************************
@@ -66,6 +66,12 @@ Transform and style the two planes
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
+	
+	  border:2px solid;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  box-shadow: 10px 10px 5px BLACK;
+	
 }
 
 .movie .poster  {
@@ -130,17 +136,17 @@ Movie information
 }
 
 .info header .rating {
-	border: 1px solid #FFF;
+	color: black;
+	border: 1px solid black;
 	padding: 0px 3px;
 }
 
-.info  {
-
-
-	font-weight: 700;
-	color: #666;
-	line-height: 1.4em;
-	border-top: 10px solid #555;
+.info td.tag1  {
+ 	font-size: 1.5em;
+	color: black;
+	padding:3px;
+	height: 50px;
+	
 }
 
 /*************************************
@@ -178,11 +184,25 @@ Posters and still images
 **************************************/
 
 .scene:nth-child(1) .movie .poster {
-  background-image: url(../images/darkblue.jpg);
+  background-color: transparent;
+  border:2px solid;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  box-shadow: 10px 10px 5px Gray;
+  padding: 20px;
+	
+
+
+ /* background-image: url(../images/darkblue.jpg);*/
 }
 
 .scene:nth-child(2) .poster {
-  background-image: url(../images/darkblue.jpg);
+  background-color: transparent;
+  border:2px solid;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  box-shadow: 10px 10px 5px Gray;
+  padding: 20px;
 }
 
 /*.scene:nth-child(3) .poster {
@@ -190,11 +210,12 @@ Posters and still images
 }*/
 
 .scene:nth-child(1) .info header {
-	background-image: url(../images/still01.jpg);
+	background-image: url(../images/9908282_130632604179_2.jpg);
+	
 }
 
 .scene:nth-child(2) .info header {
-	background-image: url(../images/still02.jpg);
+	background-image: url(../images/9908282_130632604179_2.jpg);
 }
 
 /*.scene:nth-child(3) .info header {
@@ -218,3 +239,6 @@ Media Queries
 		margin: 30px auto 60px;
 	}
 }
+
+
+

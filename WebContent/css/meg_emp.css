@@ -1,0 +1,41 @@
+  body{
+  background-color: gray;
+
+  }
+  
+
+  table{
+  background-color: gray;
+  border:2px solid;
+  border-radius:25px;
+  -moz-border-radius:25px;
+  box-shadow: 10px 10px 5px BLACK;
+  padding: 20px;
+
+
+  }
+
+  div{
+  position: relative;
+  left: 50px;
+  float: left;
+  margin: 20px;
+  }
+
+  td{font-family: 'Lato', Arial, sans-serif;
+  font-size: 100%;
+  color: #fff;
+	text-shadow: 0 0 20px red;
+  }
+  
+
+  table:hover{
+  
+  background-color: gray;
+  border:2px solid;
+  border-radius:35px;
+  -moz-border-radius:25px;
+  box-shadow: 10px 10px 5px black;
+  padding: 20px;
+  font-size: 150%;
+}
