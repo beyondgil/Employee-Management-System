@@ -144,10 +144,12 @@ Movie information
 .info td.tag1  {
  	font-size: 1.5em;
 	color: black;
-	padding:3px;
-	height: 50px;
+	padding:2px;
+	height: 40px;
 	
 }
+
+
 
 /*************************************
 Generate "lighting" using box shadows
