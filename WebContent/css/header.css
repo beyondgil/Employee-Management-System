@@ -20,6 +20,11 @@
 	font-weight: 400;
   }
   
+ .link1:hover{
+ color: red;
+ 
+ }
+  
   .btn-style2{
 	font-family: andika;
 	font-size: 210%;
@@ -30,4 +35,7 @@
 	border: none;
 	font-style: normal;
 	font-weight: 400;
+}
+.btn-style2:hover{
+	 color: red;
 }
