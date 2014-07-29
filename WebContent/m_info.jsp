@@ -5,13 +5,12 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
+  <meta name="Generator" content="EditPlusï¿½">
   <meta name="Author" content="Jun Hu">
   <meta name="Keywords" content="employee">
   <meta name="Description" content="employee page">
   <title>Welcome_User1</title>
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
-  <link rel="stylesheet" type="text/css" href="css/button_style.css" />
   <script type="text/javascript">
 	function showtime(){
 	var today=new Date();  
@@ -25,12 +24,14 @@
 </script>
   
  </head>
+
  <body onload="showtime()">
- <div> <jsp:include page="emp_header.jsp"/></div>
+ <div> <jsp:include page="m_header.jsp"/></div>
  <div class=info_box>
-  <h1><span id="txt"></span> <font color="#ff0033">User1</font></h1>
+  <h1><span id="txt"></span> User1</h1>
   <hr>
-<table>
+<table width="100%">
+<col width="40%"><col width="60%">
 <tr>
 	<td class="title">Name:</td>
 	<td class="info">user1</td>

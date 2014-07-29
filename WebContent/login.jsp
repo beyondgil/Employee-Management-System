@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/flap.css" />
   <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/button_style.css" />
  </head>
  <body>
   <div class="container">
@@ -45,9 +46,9 @@
 							  <tr>
 							  <td class="tag1" colspan="2"><label ><input name="rem" type="checkbox" value="rem" />Remember me </label></td></tr>
 								<tr>
-								<td><input type=image value=login src="images/Login.png" width=90 height=30 ></td>
+								<td><input type=button value=Login  class="btn-style" onclick="javascript:user.submit();" ></td>
 							
-								<td><input type="image" src="images/Reset.png" width=90 height=30  onclick="javascript:user.reset(); return false;" /></td>
+								<td><input type="button" value="Reset" class="btn-style"  onclick="javascript:user.reset(); return false;" /></td>
 							  </tr>
 							  </table>
 
@@ -67,7 +68,7 @@
 						</p>					
 					</div>
 					<div class="info">
-						<form action= method=post name="admin"><!-- action 下一步的ULR-->
+						<form action= method=post name="admin" name="admin"><!-- action 下一步的ULR-->
 							 <header>
 							  <h1>Login</h1>
 							 </header>
@@ -84,8 +85,8 @@
 							  <tr>
 							  <td class="tag1" colspan="2"><label ><input name="rem" type="checkbox" value="rem" />Remember me </label></td></tr>
 								<tr>
-								<td><input type=image value=login src="images/Login.png" width=90 height=30 ></td>
-								<td><input type="image" src="images/Reset.png" width=90 height=30  onclick="javascript:admin.reset(); return false;" /></td>
+								<td><input type=button value=Login  class="btn-style" onclick="javascript:admin.submit();"></td>
+								<td><input type="button" value="Reset" class="btn-style"  onclick="javascript:admin.reset(); return false;" /></td>
 							  </tr>
 							  </table>
 							</form>

@@ -9,7 +9,7 @@
   <meta name="Keywords" content="change">
   <meta name="Description" content="change">
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
-  
+  <link rel="stylesheet" type="text/css" href="css/button_style.css" />
   <title>Change</title>
 <script type="text/javascript">
 	function show_confirm()
@@ -77,6 +77,8 @@
 
  </head>
  <body>
+ <div> <jsp:include page="emp_header.jsp"/></div>
+ <div class=info_box>
   <h1>Information Change Request </h1>
   <hr>
 <form action=login.jsp name=form1 method=post>
@@ -114,10 +116,10 @@
 
   </tr>
     <tr>
-	<td><input type="image" src="images/submit.png"  onclick="show_confirm();return false;"   ></td>
-	<td><input type="image" src="images/Reset.png"  onclick="javascript:form1.reset(); return false;"></td>
+	<td><input type="button" class="btn-style" value="Submit"  onclick="show_confirm();return false;"   ></td>
+	<td><input type="button" class="btn-style" value="Reset"  onclick="javascript:form1.reset(); return false;"></td>
   </tr>
   </table>
-
-<form>
+</form>
+</div>
  </body>
