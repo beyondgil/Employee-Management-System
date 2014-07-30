@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="datastructure.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%! Manager user;
+	int i=0;
+	Employee emp;
+%>
+<% 	
+	user=(Manager)session.getAttribute("user_m"); %>
+
 <html lang="en">
  <head>
   <meta charset="UTF-8">
@@ -19,76 +26,39 @@
    
  <body>
  <jsp:include page="m_header.jsp"/>
+  <%for(i=0;i<user.getEmployee().size();i++){ 
+  emp=user.getEmployee().get(i);
+  
+  %>
+ 
  <div class=table1>
-  <h1>Useqwqwqw1</h1>
+  <h1><%=emp.getName() %></h1>
   <table >
 <tr>
 	<td class="title">Name:</td>
-	<td class="info">user1</td>
+	<td class="info"><%=emp.getName() %></td>
 </tr>
 <tr>
 	<td class="title">ID:</td>
-	<td class="info">E001</td>
+	<td class="info"><%=emp.getEmp_id() %></td>
 </tr>
 <tr>
 	<td class="title">Salary:</td>
-	<td class="info">10000</td>
+	<td class="info"><%=emp.getSalary() %></td>
 </tr>
 <tr>
 	<td class="title">Phone:</td>
-	<td class="info">999-999-9999</td>
+	<td class="info"><%=emp.getPhone() %></td>
 </tr>
 
 <tr>
 	<td class="title">Email:</td>
-	<td class="info">122232131233@123.com</td>
+	<td class="info"><%=emp.getEmail() %></td>
 </tr>
 
-<tr>
-	<td class="title">department:</td>
-	<td class="info">IT<br>Selling</td>
-</tr>
-<tr>
-	<td class="title">manager:</td>
-	<td class="info">Tom</td>
-</tr>
 </table>
  </div>
-  <div class=table1>
-  <h1>User2</h1>
-<table>
-<tr>
-	<td class="title">Name:</td>
-	<td class="info">user2</td>
-</tr>
-<tr>
-	<td class="title">ID:</td>
-	<td class="info">E001</td>
-</tr>
-<tr>
-	<td class="title">Salary:</td>
-	<td class="info">10000</td>
-</tr>
-<tr>
-	<td class="title">Phone:</td>
-	<td class="info">999-999-9999</td>
-</tr>
-
-<tr>
-	<td class="title">Email:</td>
-	<td class="info">122232131233@123.com</td>
-</tr>
-
-<tr>
-	<td class="title">department:</td>
-	<td class="info">IT<br>Selling</td>
-</tr>
-<tr>
-	<td class="title">manager:</td>
-	<td class="info">Tom</td>
-</tr>
-</table>
- </div>
+<%} %>
 
  </body>
 </html>

@@ -15,7 +15,11 @@
 <tr>
 <td width="48%"><a href="m_info.jsp" class=link1>Personal Information</a></td>
 <td width="37%"><a href="m_emp.jsp" class=link1>Subordinate</a></td>
-<td width="15%"><form><input type="button" name="logout" class="btn-style2" value="Logout" /></form></td>
+<td width="15%">
+	<form name="back" action="Login.jsp">
+		<input type="button" name="logout" class="btn-style2" value="Logout" onclick="javascript:back.submit();"/>
+	</form>
+</td>
 </tr>
 </table>
 </div>
