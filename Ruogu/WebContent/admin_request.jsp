@@ -10,37 +10,36 @@
 </head>
 <body>
 <div> <jsp:include page="admin_header.jsp"/></div>
+ 
 <div class=info_box>
 <table width="100%">
-<col width="80%"><col width="20%">
+<col width="70%"><col width="30%">
 <tr>
-<td><input type='text' name='epysearchcontent' size="75"/></td>
-<td><input type=button value=Search  class="btn-style" onclick="" /></td>
+	<td class="title"><a href="request.jsp">Request01</a></td>
+	<td class="info">Name</td>
+</tr>
+<tr>
+	<td class="title"><a href="request.jsp">Request02</a></td>
+	<td class="info">Name</td>
 </tr>
 </table>
 </div>
+
+
+<!-- 
 <div class=info_box>
+<h2> New Update in 5 Days</h2>
+<hr>
 <table width="100%">
-<col width="25%"><col width="25%"><col width="25%"><col width="25%">
+<col width="70%"><col width="30%">
 <tr>
-<td><h3>Name</h3></td>
-<td><h3>Name</h3></td>
-<td><h3>Name</h3></td>
-<td><h3>Name</h3></td>
-</tr>
-<tr>
-<td><p>a</p></td>
-<td><p>b</p></td>
-<td><p>c</p></td>
-<td><p>d</p></td>
+	<td class="title">Update01</td>
+	<td class="info">Date</td>
 </tr>
 </table>
 </div>
-<div class=info_box>
-<form action=change.jsp method=post name=emp >
-<input type="button" name="change" class="btn-style" value="Add" onclick="javascript:emp.submit();"/>
-</div>
-</form>
+ -->
+
 </body>
 </html>
 

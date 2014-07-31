@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
  <head>
-  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
   <title>Add Form</title>
@@ -73,10 +72,10 @@
 
  </head>
  <body>
- <div> <jsp:include page="admin_header.jsp"/></div>
  <div class=info_box>
-  <h1>Add Employee </h1>
-  <hr>
+ <input type="button" name="Back_epylist" class="btn-style" value="Back" onclick="javascript :history.back(-1);"/>
+</div>
+<div class=info_box>
 <form action=login.jsp name=form1 method=post>
 <table>
 <tr>

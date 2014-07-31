@@ -4,38 +4,39 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Welcome_Admin</title>
+  <title>Department List</title>
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
 </head>
 <body>
 <div> <jsp:include page="admin_header.jsp"/></div>
- 
 <div class=info_box>
-<h2>Request</h2>
-<hr>
 <table width="100%">
-<col width="70%"><col width="30%">
+<col width="80%"><col width="20%">
 <tr>
-	<td class="title">Request01</td>
-	<td class="info">Date</td>
+<td><input type='text' name='dpmsearchcontent' size="75"/></td>
+<td><input type=button value=Search  class="btn-style" onclick="" /></td>
 </tr>
 </table>
 </div>
+<div class=info_box>
+<table width="100%">
+<tr>
+<td><h3>Department</h3></td>
+</tr>
+<tr>
+<td><a href="dpt_epy_list.jsp" class=link_name>a</a></td>
+</tr>
+<tr>
+<td><p>b</p></td>
+</tr>
+<tr>
+<td><p>c</p></td>
+</tr>
+</table>
 
-<div class=info_box>
-<h2> New Update in 5 Days</h2>
-<hr>
-<table width="100%">
-<col width="70%"><col width="30%">
-<tr>
-	<td class="title">Update01</td>
-	<td class="info">Date</td>
-</tr>
-</table>
 </div>
- 
- 
+<div class=info_box><input type=button value=Add  class="btn-style" onclick="" /></div>
 </body>
 </html>
 

@@ -13,7 +13,7 @@
 <div class=header>
 <table width="100%">
 <tr>
-<td width="15%"><a href="admin_home.jsp" class=link1>Home</a></td>
+<td width="25%"><a href="admin_request.jsp" class=link1>Request</a></td>
 <td width="25%"><a href="employee_list.jsp" class=link1>Employee</a></td>
 <td width="25%"><a href="department_list.jsp" class=link1>Department</a></td>
 <td width="15%"><form><input type="button" name="logout" class="btn-style2" value="Logout" /></form></td>

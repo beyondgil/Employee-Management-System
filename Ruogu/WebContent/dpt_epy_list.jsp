@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Department List</title>
+  <title>Welcome_Admin</title>
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
 </head>
@@ -14,29 +14,36 @@
 <table width="100%">
 <col width="80%"><col width="20%">
 <tr>
-<td><input type='text' name='dpmsearchcontent' size="75"/></td>
+<td><input type='text' name='epysearchcontent' size="75"/></td>
 <td><input type=button value=Search  class="btn-style" onclick="" /></td>
 </tr>
 </table>
 </div>
 <div class=info_box>
 <table width="100%">
+
 <col width="25%"><col width="25%"><col width="25%"><col width="25%">
 <tr>
-<td><h3>Department</h3></td>
-<td><h3>Department</h3></td>
-<td><h3>Department</h3></td>
-<td><h3>Department</h3></td>
+<td colspan="4"><h2>Department A</h2></td>
 </tr>
-<td><p>a</p></td>
-<td><p>b</p></td>
-<td><p>c</p></td>
-<td><p>d</p></td>
+<tr>
+<td><h3>Name</h3></td>
+<td><h3>Name</h3></td>
+<td><h3>Name</h3></td>
+<td><h3>Name</h3></td>
+</tr>
+<tr>
+<td><a href="admin_employee_info.jsp" class=link_name>a</a></td>
+<td><a href="employee_info.jsp" class=link_name>b</a></td>
+<td><a href="employee_info.jsp" class=link_name>c</a></td>
+<td><a href="employee_info.jsp" class=link_name>d</a></td>
 </tr>
 </table>
-
 </div>
-<div class=info_box><input type=button value=Add  class="btn-style" onclick="" /></div>
+<div class=info_box>
+<input type="button" name="add" class="btn-style" value="Add" onclick="window.location.href('addform.jsp')"/>
+</div>
+
 </body>
 </html>
 
