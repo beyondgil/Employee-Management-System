@@ -1,0 +1,66 @@
+td.title{font-family: 'Lato', Arial, sans-serif;
+  font-size: 200%;
+  color: #fff;
+	text-shadow: 0 0 20px red;
+	vertical-align:top;
+   padding:10px;
+  }
+  
+td.info{font-family: 'Lato', Arial, sans-serif;
+  font-size: 200%;
+  color: #fff;
+  vertical-align:top;
+   padding:10px;
+  }
+  
+  body{
+    background-color: gray;
+  
+  }
+  
+  .info_box{
+	position: relative;
+	left: 20%;
+	top: 15px;
+	width: 60%;
+	background-color: gray;
+	border: 2px solid;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	box-shadow: 10px 10px 5px BLACK;
+	padding: 20px;
+  }
+  
+  
+  h1{
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 250%;
+  color: #fff;
+  text-shadow: 0 0 25px red;
+  }
+  
+
+  
+
+  
+  label{
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 150%;
+  color: #fff;
+  
+  }
+  
+  button{
+  background_color:transparent;
+  }
+  
+  
+  input.text1
+{
+    color: #979797;
+    height: 28px;
+    padding-left: 10px;
+    text-decoration: none;
+
+
+}
