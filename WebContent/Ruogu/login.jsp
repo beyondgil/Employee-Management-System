@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII"%>
-    		<%session.invalidate(); %>
-  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
  <head>
   <meta charset="UTF-8">
@@ -26,9 +25,11 @@
 						<header>
 							<h1>User Entrance</h1>
 						</header>
-						</div>
+						<p>
+							必要说明
+						</p></div>
 					<div class="info">
-						<form action=LoginCheck method=post name="user"><!-- action 下一步的ULR-->
+						<form action=employee_info.jsp method=post name="user"><!-- action 下一步的ULR-->
 							 <header>
 							  <h1>Login</h1>
 							 </header>
@@ -62,10 +63,12 @@
 						<header>
 							<h1>Admin Entrance</h1>
 						</header>
-									
+						<p>
+							必要说明
+						</p>					
 					</div>
 					<div class="info">
-						<form action=AdminCheck method=post name="admin" name="admin"><!-- action 下一步的ULR-->
+						<form action= method=post name="admin" name="admin"><!-- action 下一步的ULR-->
 							 <header>
 							  <h1>Login</h1>
 							 </header>
