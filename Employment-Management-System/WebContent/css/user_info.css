@@ -18,6 +18,10 @@
       color: red;
       vertical-align:bottom;
   }
+
+  .warning_img{
+      vertical-align:bottom;
+  }
   body{
     background-color: gray;
   

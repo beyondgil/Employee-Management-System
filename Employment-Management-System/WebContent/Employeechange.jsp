@@ -27,7 +27,7 @@
  <div class=info_box>
   <h1>Information Change Request </h1>
   <hr>
-<form action=EmployeeRequestHandle name=form1 method=post>
+<form action=EmployeeRequestHandle name=form1 method=post id="form1">
 <table>
 <tr>
 	<td class="title">Salary:</td>
@@ -40,7 +40,7 @@
 
 <tr>
 	<td class="title">E-mail:</td>
-	<td><input class='text1' name='email' type='text' size="30"/><div class="warning" id="div_email" style="display:inline">
+	<td><input class='text1' name='email' type='text' size="30" onchange="checkEmail()"/><img src="" id="warning_img" class="warning_img"><div class="warning" id="div_email" style="display:inline">
 </div> </td>
 
 </tr>
