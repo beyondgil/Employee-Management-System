@@ -1,4 +1,4 @@
-.title{font-family: 'Lato', Arial, sans-serif;
+td.title{font-family: 'Lato', Arial, sans-serif;
   font-size: 200%;
   color: #fff;
 	text-shadow: 0 0 20px red;
@@ -6,22 +6,13 @@
    padding:10px;
   }
   
-.info{font-family: 'Lato', Arial, sans-serif;
+td.info{font-family: 'Lato', Arial, sans-serif;
   font-size: 200%;
   color: #fff;
   vertical-align:top;
    padding:10px;
   }
-  .warning{
-      font-family: 'Lato', Arial, sans-serif;
-      font-size: 200%;
-      color: red;
-      vertical-align:bottom;
-  }
-
-  .warning_img{
-      vertical-align:bottom;
-  }
+  
   body{
     background-color: gray;
   

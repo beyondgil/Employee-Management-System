@@ -14,7 +14,7 @@
 </head>
 <body>
 <div> <jsp:include page="admin_header.jsp"/></div>
-<div class=info_box>
+<!--  <div class=info_box>
 <table width="100%">
 <col width="80%"><col width="20%">
 <tr>
@@ -22,21 +22,22 @@
 <td><input type=button value=Search  class="btn-style" onclick="" /></td>
 </tr>
 </table>
-</div>
+</div>-->
 <div class=info_box>
 <table width="100%">
 <col width="25%"><col width="25%"><col width="25%"><col width="25%">
-
 <tr>
-<td><a href="admin_employee_info.jsp" class=link_name>a</a></td>
-<td><a href="employee_info.jsp" class=link_name>b</a></td>
-<td><a href="employee_info.jsp" class=link_name>c</a></td>
-<td><a href="employee_info.jsp" class=link_name>d</a></td>
+<%for (int i=0;i<emp.size();i++){ %>
+<td><a href="admin_employee_info.jsp?num=<%=i%>" class=link_name><%=emp.get(i).getName() %></a></td>
+<%if ((i+1)%4==0) out.println("</tr><tr>");%>
+<%} %>
 </tr>
 </table>
 </div>
 <div class=info_box>
-<input type="button" name="add" class="btn-style" value="Add" onclick="window.location.href('addform.jsp')"/>
+<form action=addform.jsp method=post name="adminadd" >
+<input type="button" name="add" class="btn-style" value="Add" onclick="javascript:adminadd.submit();"/>
+</form>
 </div>
 
 </body>

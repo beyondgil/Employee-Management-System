@@ -1,8 +1,9 @@
 package datastructure;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Request {
+public class Request implements Serializable{
 private int emp_id;
 private String name;
 private float salary;

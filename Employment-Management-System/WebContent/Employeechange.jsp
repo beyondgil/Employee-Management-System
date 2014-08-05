@@ -14,20 +14,19 @@
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
   <title>Change</title>
+<title>Change</title>
      <script type="text/javascript" src="JS/jquery.js"></script>
      <script type="text/javascript" src="JS/info_change.js"></script>
-
 
  </head>
  <body>
  	<% user=(Employee)session.getAttribute("user");
- 		System.out.println(user.getName());
  	%>
  <div> <jsp:include page="emp_header.jsp"/></div>
  <div class=info_box>
   <h1>Information Change Request </h1>
   <hr>
-<form action=EmployeeRequestHandle name=form1 method=post id="form1">
+<form action=EmployeeRequestHandle name=form1 method=post>
 <table>
 <tr>
 	<td class="title">Salary:</td>
@@ -40,19 +39,19 @@
 
 <tr>
 	<td class="title">E-mail:</td>
-	<td><input class='text1' name='email' type='text' size="30" onchange="checkEmail()"/><img src="" id="warning_img" class="warning_img"><div class="warning" id="div_email" style="display:inline">
+	<td><input class='text1' name='email' type='text' size="30"/><div id="div_email" style="display:inline"> 
 </div> </td>
-
+	
 </tr>
 
 
 <tr>
 	<td class="title">department:</td>
 	  <td>
-    <label><input name="department" type="checkbox" value="11111" onclick="getcheck();" />Human Resources </label>
-	<label><input name="department" type="checkbox" value="21111" onclick="getcheck();" />Technology </label>
-    <label><input name="department" type="checkbox" value="31111" onclick="getcheck();" />Marketing </label>
-    <label><input name="department" type="checkbox" value="41111" onclick="getcheck();" />Finance </label>
+	<label><input name="department" type="checkbox" value="11111" />Human Resources </label>
+	<label><input name="department" type="checkbox" value="21111" />Technology </label>
+    <label><input name="department" type="checkbox" value="31111" />Marketing </label>
+    <label><input name="department" type="checkbox" value="41111" />Finance </label>
 	  </td>
 </tr>
 <tr>

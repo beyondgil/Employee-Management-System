@@ -5,7 +5,7 @@
  <head>
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
-  <title>Add Form</title>
+  <title>Update Form</title>
 <script type="text/javascript">
 	function show_confirm()
 	{	var info_check=check();
@@ -69,14 +69,14 @@
 
 </script>
 
-
+<%int i=Integer.parseInt(request.getParameter("temEU")); %>
  </head>
  <body>
  <div class=info_box>
  <input type="button" name="Back_epylist" class="btn-style" value="Back" onclick="javascript :history.back(-1);"/>
 </div>
 <div class=info_box>
- <form action=AdminEmpAdd method=post name="adminadd" ><table>
+ <form action=AdminEmpUpdate?no=<%=i %> method=post name="adminupdate" ><table>
 <tr>
 	<td class="title">Name:</td>
 	<td><input class='text1' name='name' type='text' size="30"/></td>
@@ -111,14 +111,11 @@
 	<td  class="title">manager:</td>
 	<td><input class='text1' name='manager' type='text' size="30"/></td>
 </tr>
-<tr>
-	<td  class="title">Password:</td>
-	<td><input class='text1' name='password' type='text' size="30"/></td>
-</tr>
+
 
     <tr>
 	<td>   
-	<input type="button" class="btn-style" value="Submit"  onclick="javascript:adminadd.submit();"   >
+	<input type="button" class="btn-style" value="Submit"  onclick="javascript:adminupdate.submit();"   >
 	
 	</td>
 	<td><input type="button" class="btn-style" value="Reset"  onclick="javascript:form1.reset(); return false;"></td>

@@ -7,8 +7,6 @@
   <meta name="Keywords" content="change">
   <meta name="Description" content="change">
   <title>Change</title>
-     <script type="text/javascript" src="JS/jquery.js"></script>
-     <script type="text/javascript" src="JS/verify.js"></script>
 	<script type="text/javascript">
 	function show_confirm()
 	{
@@ -24,15 +22,7 @@
 	  }
 	}
 </script>
-     <script>
-         function getcheck() {
-             var x = document.getElementsByName("department");
 
-             for (var i = 0; i < x.length; i++) {
-                alert(x[i].value + " is checked!");
-             }}
-
-     </script>
 
  </head>
  <body>
@@ -55,10 +45,10 @@
 </tr>
 
 
-    <tr>
-        <td>Department:</td>
-        <td>
-            <!-- <select multiple="multiple" name="department">
+<tr>
+	<td>Department:</td>
+	  <td>
+	  <!-- <select multiple="multiple" name="department">
 	  <option value="IT">IT</option>
 	  <option value="Selling">Selling</option>
 	  <option value="Hiring">Hiring</option>
@@ -67,27 +57,24 @@
 		 <option value="C">C</option>
 	  </select> -->
 
-            <label><input name="department" type="checkbox" value="IT" onclick="getcheck();"/>IT </label>
-            <label><input name="department" type="checkbox" value="Selling" onclick="getcheck();"/>Selling </label>
-            <label><input name="department" type="checkbox" value="Hiring" onclick="getcheck();"/>Hiring </label>
-            <label><input name="department" type="checkbox" value="A" onclick="getcheck();"/>A </label>
+	<label><input name="department" type="checkbox" value="IT" />IT </label>
+	<label><input name="department" type="checkbox" value="Selling" />Selling </label>
+    <label><input name="department" type="checkbox" value="Hiring" />Hiring </label>
+    <label><input name="department" type="checkbox" value="A" />A </label>
+	  </td>
+</tr>
+<tr>
+	<td>Manager:</td>
+	<td><input type='text' name='manager'/></td>
+</tr>
 
-        </td>
-
-        <td>Manager:</td>
-        <td><input type='text' name='manager'/></td>
-    </tr>
-
-    </tr>
+  </tr>
     <tr>
 	<td><input type=button onclick="show_confirm()" value=submit></td>
 	<td><input type=reset value=reset></td>
   </tr>
   </table>
-</form>
 
-
-
-
-</body>
+<form>
+ </body>
 </html>

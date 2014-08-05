@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,24 +14,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import datastructure.Employee;
 import sql.DatabaseConnection;
+import datastructure.Employee;
+import datastructure.Request;
 
 /**
- * Servlet implementation class RequestHandle
+ * Servlet implementation class AdminEmpDelete
  */
-@WebServlet("/EmployeeRequestHandle")
-public class EmployeeRequestHandle extends HttpServlet {
+@WebServlet("/AdminEmpDelete")
+public class AdminEmpDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Connection cn;
 	Statement st;
 	ResultSet rs;
+	int i=0; 
 	HttpSession session;
-	Employee user;
+	Employee temp=new Employee();
+	 ArrayList<Employee> emp=new ArrayList<Employee>();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EmployeeRequestHandle() {
+    public AdminEmpDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -47,29 +51,22 @@ public class EmployeeRequestHandle extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		cn=new DatabaseConnection().getConnection();
-		float salary=Float.parseFloat(request.getParameter("Salary"));
-		int phone=Integer.parseInt(request.getParameter("Phone"));
-		String email=request.getParameter("email");
-		String[] department=request.getParameterValues("department");
-		String departments="";
-		for(String s:department){
-			departments+=s+",";
-		}
+		i=Integer.parseInt(request.getParameter("temED"));
 		session=request.getSession();
-		user=(Employee)session.getAttribute("user");
-		String name=user.getName();
-		int id=user.getEmp_id();
+		emp=(ArrayList<Employee>)session.getAttribute("Employee");
+		temp=emp.get(i);
+		cn=new DatabaseConnection().getConnection();	
 		try{
 			st=cn.createStatement();
-			rs=st.executeQuery("select * from request where emp_id="+id);
-			if(rs.next()) st.executeUpdate("delete from request where emp_name='"+name+"'");
-			System.out.println(name+"\t"+salary+"\t"+phone+"\t"+email+"\t");
-			st.executeUpdate("insert into request values( "+id+", '"+name+"',"+salary+","+phone+",'"+email+"','"+departments +"')");
+			st.executeUpdate("delete from request where emp_id ="+ temp.getEmp_id());
+			st.executeUpdate("delete from emp_dep where emp_id="+temp.getEmp_id());
+			st.executeUpdate("delete from manager where emp_id="+temp.getEmp_id());
+			st.executeUpdate("delete from employee where emp_id ="+ temp.getEmp_id());
+			emp.remove(i);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Employee.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/employee_list.jsp");
 		dispatcher.forward(request, response);
 	}
 

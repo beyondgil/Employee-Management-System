@@ -82,7 +82,7 @@
 							  <tr>
 							  <td class="tag1" colspan="2"><label ><input name="rem" type="checkbox" value="rem" />Remember me </label></td></tr>
 								<tr>
-								<td><input type=button value=Login  class="btn-style" onclick="javascript:admin.submit();"/></td>
+								<td><input type=button value=Login  class="btn-style" onclick="javascript:admin.submit();"></td>
 								<td><input type="button" value="Reset" class="btn-style"  onclick="javascript:admin.reset(); return false;" /></td>
 							  </tr>
 							  </table>

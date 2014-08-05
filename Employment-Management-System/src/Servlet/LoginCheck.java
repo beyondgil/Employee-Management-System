@@ -91,7 +91,6 @@ public class LoginCheck extends HttpServlet {
 					rs=st.executeQuery("select * from employee where emp_id in (select man_id from manager where emp_id="+emp.getEmp_id()+")");
 					while(rs.next()){
 						man=new Manager();
-						System.out.println(rs.getString("email"));
 						man.setEmail(rs.getString("email"));
 						man.setEmp_id(Integer.parseInt(rs.getString("emp_id")));
 						man.setName(rs.getString("emp_name"));
@@ -105,7 +104,6 @@ public class LoginCheck extends HttpServlet {
 					}
 				}
 			}
-			System.out.println(user+"\t"+password+"\t"+passwordcheck+"\t"+flag_e);
 			}
 		}catch(Exception e){
 			e.printStackTrace();

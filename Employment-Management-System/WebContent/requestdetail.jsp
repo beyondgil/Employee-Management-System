@@ -1,22 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1" import="datastructure.*,java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<%int i=Integer.parseInt(request.getParameter("temp"));
+<%int i=Integer.parseInt(request.getParameter("temp")); 
 	ArrayList<Request> req=new ArrayList<Request>();
 	req=(ArrayList<Request>)session.getAttribute("Request");
 	Request t_req=new Request();
 	t_req=req.get(i);
+	int j=0;
 
 %>
-
 <html lang="en">
  <head>
   <title>Request</title>
   <link rel="stylesheet" type="text/css" href="css/user_info.css" />
   <link rel="stylesheet" type="text/css" href="css/button_style.css" />
-     <script type="text/javascript" src="JS/jquery.js"></script>
-     <script type="text/javascript" src="JS/verify.js"></script>
  </head>
  
  <body>
@@ -56,9 +53,9 @@
 <tr>
 	<td class="title">Department:</td>
 	<td class="info">
-	<%for(i=0;i<(t_req.getDepartment().size());i++){
+	<%for(j=0;j<(t_req.getDepartment().size());j++){
 		
-		out.println(t_req.getDepartment().get(i));
+		out.println(t_req.getDepartment().get(j));
 		out.println("<br/>");
 	} %>
 	</td>
@@ -67,13 +64,13 @@
 
 <tr>
 <td>
-<form action=RequestAgree?tem=<%=i%> method=post name="agree" >
-<input type="button" name="agree" class="btn-style" value="Agree" onclick="javascript:agree.submit();"/>
+<form action=RequestAgree?tema=<%=i%> method=post name="agree" >
+<input type="button" name="ag" class="btn-style" value="Agree" onclick="javascript:agree.submit();"/>
 </form>
 </td>
 <td>
-<form action=RequestDisagree method=post name="disagree" >
-<input type="button" class="btn-style" value="Disagree" onclick="javascript:disagree1();"/>
+<form action=RequestDisagree?temd=<%=t_req.getEmp_id()%>&num=<%=i %> method=post name="disagree" >
+<input type="button" name="disag" class="btn-style" value="Disagree" onclick="javascript:disagree.submit();"/>
 </form>
 </td>
 </tr>

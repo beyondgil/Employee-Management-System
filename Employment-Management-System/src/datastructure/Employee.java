@@ -60,5 +60,16 @@ public ArrayList<String> getDepartment() {
 public void addDepartment(String d) {
 	department.add(d);
 }
-
+public Employee(){
+	
+}
+public Employee(int emp_id, String emp_name, float salary, int phone,
+		String email, String password) {
+	this.emp_id = emp_id;
+	this.name = emp_name;
+	this.salary = salary;
+	this.phone = phone;
+	this.email = email;
+	this.password = password;
+}
 }
