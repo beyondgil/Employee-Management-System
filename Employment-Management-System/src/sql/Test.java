@@ -22,13 +22,13 @@ public class Test {
 		 WritableWorkbook book;
 		 WritableSheet sheet;
 		 int col=0;
-		 try{File file = new File("t.xls");
+		 try{File file = new File("C:/Users/Espada/Desktop/t.xls");
 			 if(!file.exists()){
-		            book= Workbook.createWorkbook(new File("t.xls")); 
+		            book= Workbook.createWorkbook(new File("C:/Users/Espada/Desktop/t.xls"));
 		             sheet=book.createSheet("Report",0); 
 			 }else{
-				 Workbook wb = Workbook.getWorkbook( new File( "t.xls" ));
-				 book = Workbook.createWorkbook( new File( "t.xls" ),
+				 Workbook wb = Workbook.getWorkbook( new File( "C:/Users/Espada/Desktop/t.xls" ));
+				 book = Workbook.createWorkbook( new File(" C:/Users/Espada/Desktop/t.xls" ),
 				wb);
 				
 				sheet = book.createSheet( "Report" , 0 );
