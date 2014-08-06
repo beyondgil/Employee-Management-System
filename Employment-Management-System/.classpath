@@ -14,7 +14,5 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/Users/mozil272/Documents/mysql-connector-java-5.1.31/mysql-connector-java-5.1.31-bin.jar"/>
-	<classpathentry kind="lib" path="/Users/mozil272/Downloads/poi-3.10-FINAL"/>
-	<classpathentry kind="lib" path="/Users/mozil272/Documents/jexcelapi/jxl.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

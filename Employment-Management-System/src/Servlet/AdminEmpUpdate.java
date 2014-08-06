@@ -1,10 +1,8 @@
 package Servlet;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
+import datastructure.Employee;
+import datastructure.Manager;
+import sql.DatabaseConnection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,10 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import sql.DatabaseConnection;
-import datastructure.Employee;
-import datastructure.Manager;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * Servlet implementation class AdminEmpUpdate
@@ -32,7 +31,7 @@ public class AdminEmpUpdate extends HttpServlet {
 	Employee temp=new Employee();
 	 ArrayList<Employee> emp=new ArrayList<Employee>();
     /**
-     * @see HttpServlet#HttpServlet()
+     * @see javax.servlet.http.HttpServlet#HttpServlet()
      */
     public AdminEmpUpdate() {
         super();
@@ -40,14 +39,14 @@ public class AdminEmpUpdate extends HttpServlet {
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

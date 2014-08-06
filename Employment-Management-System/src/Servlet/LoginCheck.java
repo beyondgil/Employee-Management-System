@@ -1,12 +1,6 @@
 package Servlet;
-import sql.*;
-import datastructure.Employee;
-
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
+import sql.DatabaseConnection;
+import datastructure.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import datastructure.*;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 /**
  * Servlet implementation class LoginCheck
  */
@@ -91,6 +87,7 @@ public class LoginCheck extends HttpServlet {
 					rs=st.executeQuery("select * from employee where emp_id in (select man_id from manager where emp_id="+emp.getEmp_id()+")");
 					while(rs.next()){
 						man=new Manager();
+						System.out.println(rs.getString("email"));
 						man.setEmail(rs.getString("email"));
 						man.setEmp_id(Integer.parseInt(rs.getString("emp_id")));
 						man.setName(rs.getString("emp_name"));
@@ -104,6 +101,7 @@ public class LoginCheck extends HttpServlet {
 					}
 				}
 			}
+			System.out.println(user+"\t"+password+"\t"+passwordcheck+"\t"+flag_e);
 			}
 		}catch(Exception e){
 			e.printStackTrace();

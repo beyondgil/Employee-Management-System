@@ -1,20 +1,19 @@
 package sql;
 
-import java.util.List;
-
-import datastructure.*;
-
-import java.io.File;
-
-import jxl.*;
+import datastructure.Department;
+import datastructure.Employee;
+import jxl.Workbook;
 import jxl.write.Label;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
+import java.io.File;
+import java.util.List;
+
 
 public class Test {
 
-	public static void main(String[] args) {
+	public void create_excel( ) {
         String title[]={"Id","Name","Salary","Phone","Email"};
         String title2[]={"Dep_id","Name"};
 		EmployeeService service = new EmployeeService();
