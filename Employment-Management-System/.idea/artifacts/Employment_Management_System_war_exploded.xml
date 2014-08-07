@@ -6,9 +6,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Employment-Management-System" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../JXL/jxl.jar" />
+        </element>
       </element>
-      <element id="javaee-facet-resources" facet="Employment-Management-System/web/Web2" />
       <element id="javaee-facet-resources" facet="Employment-Management-System/web/Web" />
+      <element id="javaee-facet-resources" facet="Employment-Management-System/web/Web2" />
     </root>
   </artifact>
 </component>
